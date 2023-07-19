@@ -8,7 +8,12 @@
 <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
 </head>
-<body>
+<body style="background-color: white;">
+{% if n in friend_exists %}
+<p > {{n}}  true the friend exists</p>
+{% else %}
+<p> not your friend , false the friend does not exist</p>
+{% endif %}
 
 
 
