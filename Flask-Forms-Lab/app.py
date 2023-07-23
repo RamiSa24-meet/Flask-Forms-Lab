@@ -8,7 +8,7 @@ app = Flask(  # Create a flask app
 )
 app.config['SECRET_KEY'] = 'super-secret-key'
 
-info = {'llo2ay':'123' , "rami":"samra","lol":"dope"}
+info = {'llo2ay':'123' , "rami":"samra","lol":"dope", }
 
 facebook_friends = ["bashar hussein","tamer yaqub","majd trabeh", "Eid Samra", "mary samra ", "bseeil "]
 
@@ -33,7 +33,7 @@ def login():
   else:
     z =request.form['username'] 
     x = request.form['password']
-    if z in info and x == info[z]:
+    if (z in info and x ==a info[z])and (len(x)>7 and len(z)>7):
       return redirect(url_for('home'))
     else:
       print("hello")
